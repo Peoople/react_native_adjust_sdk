@@ -233,6 +233,7 @@ var AdjustConfig = function(appToken, environment) {
     // Android only
     this.processName = null;
     this.readMobileEquipmentIdentity = null;
+    this.preinstallTrackingEnabled = null;
     // iOS only
     this.allowiAdInfoReading = null;
     this.allowIdfaReading = null;
@@ -321,6 +322,10 @@ AdjustConfig.prototype.setUrlStrategy = function(urlStrategy) {
 
 AdjustConfig.prototype.setReadMobileEquipmentIdentity = function(readMobileEquipmentIdentity) {
     // this.readMobileEquipmentIdentity = readMobileEquipmentIdentity;
+};
+
+AdjustConfig.prototype.setPreinstallTrackingEnabled = function(preinstallTrackingEnabled) {
+    this.preinstallTrackingEnabled = preinstallTrackingEnabled;
 };
 
 AdjustConfig.prototype.setAllowiAdInfoReading = function(allowiAdInfoReading) {

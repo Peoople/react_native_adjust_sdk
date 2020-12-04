@@ -121,6 +121,7 @@ public class Adjust extends ReactContextBaseJavaModule implements LifecycleEvent
         boolean shouldLaunchDeeplink = false;
         boolean eventBufferingEnabled = false;
         boolean readMobileEquipmentIdentity = false;
+        boolean preinstallTrackingEnabled = false;
 
         // Suppress log level.
         if (checkKey(mapConfig, "logLevel")) {
@@ -247,6 +248,12 @@ public class Adjust extends ReactContextBaseJavaModule implements LifecycleEvent
         //     readMobileEquipmentIdentity = mapConfig.getBoolean("readMobileEquipmentIdentity");
         //     adjustConfig.setReadMobileEquipmentIdentity(readMobileEquipmentIdentity);
         // }
+
+        // Preinstall tracking.
+        if (checkKey(mapConfig, "preinstallTrackingEnabled")) {
+            preinstallTrackingEnabled = mapConfig.getBoolean("preinstallTrackingEnabled");
+            adjustConfig.setPreinstallTrackingEnabled(preinstallTrackingEnabled);
+        }
 
         // Launching deferred deep link.
         if (checkKey(mapConfig, "shouldLaunchDeeplink")) {
